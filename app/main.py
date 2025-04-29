@@ -9,6 +9,7 @@ from app.api.metadata import router as metadata_router
 from app.api.characters import router as characters_router
 from app.api.me import router as me_router
 from app.api.npc_chat import router as npc_chat_router
+from app.api.profile import router as profile_router
 
 # 환경 변수 로드
 load_dotenv()
@@ -32,6 +33,7 @@ app.include_router(metadata_router)
 app.include_router(characters_router)
 app.include_router(me_router)
 app.include_router(npc_chat_router)
+app.include_router(profile_router)
 
 @app.get("/")
 async def root():
